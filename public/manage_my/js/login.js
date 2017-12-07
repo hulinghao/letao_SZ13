@@ -70,6 +70,9 @@ $(function () {
         e.preventDefault();
         //使用ajax提交逻辑
         console.log('你点我啦');
+        // 增加进度条开启代码
+        //开启进度条
+        NProgress.start();
         // ajax 提交数据
         $.ajax({
             url: "/employee/employeeLogin",
@@ -95,6 +98,10 @@ $(function () {
                     }
                 }
 
+                setTimeout(function(){
+                    // 收起进度条
+                    NProgress.done();
+                },1000)
             }
         })
     });
@@ -105,4 +112,9 @@ $(function () {
         var validator = $("form").data('bootstrapValidator'); //获取表单校验实例
         validator.resetForm();
     })
+
+    // 4.测试进度条
+
+    //关闭进度条
+    setTimeout(function () {}, 2000)
 })
