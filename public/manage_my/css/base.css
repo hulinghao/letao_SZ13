@@ -95,7 +95,7 @@ body {
 /* 主体样式 */
 
 .lt_main {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     height: 100%;
     padding-left: 180px;
 }
@@ -110,7 +110,7 @@ body {
 .lt_main .header {
     height: 50px;
     padding: 0 20px;
-    background-color: yellowgreen;
+    background-color: skyblue;
 }
 
 .lt_main .header a {
