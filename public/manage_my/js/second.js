@@ -165,8 +165,7 @@ $(function () {
             type:"post",
             success:function(backData){
                 console.log(backData);
-                /*
-                // 重新获取数据
+                // 重新获取数据 页面不会刷新
                 getData();
 
                 // 关闭modal
@@ -176,8 +175,11 @@ $(function () {
                 $('form input').val('');
                 $('form img').attr('src','./images/none.png');
                 $('.select-value').html('请选择');
-                */
+
+                // 刷新页面
                 // window.location.reload();
+                // window.location.href = window.location.href;
+
             }
         })
 
