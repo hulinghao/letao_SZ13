@@ -30,7 +30,7 @@
             <!-- 结构 -->
             <!-- form>input[type="search"]+button -->
             <form class="search-form" action="./searchList.html">
-                <input placeholder="请输入搜索关键字" type="search">
+                <input name="key"  placeholder="请输入搜索关键字" type="search">
                 <button>搜索</button>
             </form>
             <!-- 搜索历史 -->
@@ -95,6 +95,19 @@
 
 </html>
 <!-- 导入mui -->
-<script src="./lib/zepto/zepto.min.js"></script><script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<!-- 导入模板引擎 -->
+<script src="./lib/artTemplate/template.js"></script>
+<!-- 定义模板 -->
+<script id='searchList' type="text/html">
+    {{each}}
+        <li>
+            <a href="javascript:void(0)">{{$value}}</a>
+            <span class="fa fa-close"></span>
+        </li>
+    {{/each}}
+</script>
 <script src="./js/common.js"></script>
-!
+<!-- 自己的js -->
+<script src="./js/search.js"></script>
