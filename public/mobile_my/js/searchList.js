@@ -123,4 +123,15 @@ $(function () {
         }
 
     })
+
+    /*
+        需求6
+            点击立即购买 去详情页
+            同时带上id
+    */ 
+    $('.product-list').on('click','button',function(){
+        var id =$(this).attr("data-id");
+        // console.log(id);
+        window.location.href = './product.html?id='+id;
+    })
 })
